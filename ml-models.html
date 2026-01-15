@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Models - Data Science Lab</title>
+    <link rel="stylesheet" href="css/ml-style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-img">
+                    <img src="https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-1/528076248_2223560778075447_4856427121483293902_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e99d92&_nc_ohc=EAmCuWNC9YsQ7kNvwECITOZ&_nc_oc=AdlGhSww8u795TkvS6Cn9SPccfD-_cZ-HnJBd0HlaVUTefH7VRxjb3oMGsNUmcm5kL0&_nc_zt=24&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=polfDqEBrMY0Gtwr5lkuWA&oh=00_AfoEqrRos8Oc6Fjo1u5lGkQMfIupaNLbxmLqXwZXORDJvg&oe=696CBD99"
+                        alt="Riddy Mazumder">
+                </div>
+                <div class="logo-text">
+                    <h1>📊 Data Science Lab</h1>
+                    <p class="logo-name">by Riddy Mazumder</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kaggle-competitions.html">Kaggle Competitions</a></li>
+                <li><a href="ml-models.html" class="active">ML Models</a></li>
+                <li><a href="dl-models.html">DL Models</a></li>
+                <li><a href="llm-models.html">LLM Models</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>📈 Machine Learning Models</h1>
+        <p>Classical ML algorithms and implementations</p>
+    </header>
+
+    <section class="main-section">
+        <div class="container">
+            <div class="cards-grid">
+                <!-- ML Model 1 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Linear+Regression" alt="Linear Regression">
+                    </div>
+                    <div class="card-content">
+                        <h3>Linear Regression</h3>
+                        <p class="card-description">Fundamental regression technique for predicting continuous values.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Regression</span>
+                            <span class="tag">Supervised</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 2 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Logistic+Regression"
+                            alt="Logistic Regression">
+                    </div>
+                    <div class="card-content">
+                        <h3>Logistic Regression</h3>
+                        <p class="card-description">Binary and multi-class classification algorithm.</p>
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Supervised</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 3 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Decision+Trees" alt="Decision Trees">
+                    </div>
+                    <div class="card-content">
+                        <h3>Decision Trees</h3>
+                        <p class="card-description">Tree-based model for both regression and classification.</p>
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Tree-Based</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 4 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Random+Forest" alt="Random Forest">
+                    </div>
+                    <div class="card-content">
+                        <h3>Random Forest</h3>
+                        <p class="card-description">Ensemble method combining multiple decision trees.</p>
+                        <div class="card-tags">
+                            <span class="tag">Ensemble</span>
+                            <span class="tag">Tree-Based</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 5 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Support+Vector+Machine" alt="SVM">
+                    </div>
+                    <div class="card-content">
+                        <h3>Support Vector Machines</h3>
+                        <p class="card-description">Powerful algorithm for classification and regression tasks.</p>
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Non-linear</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 6 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=K-Means+Clustering" alt="K-Means">
+                    </div>
+                    <div class="card-content">
+                        <h3>K-Means Clustering</h3>
+                        <p class="card-description">Unsupervised learning for data partitioning.</p>
+                        <div class="card-tags">
+                            <span class="tag">Clustering</span>
+                            <span class="tag">Unsupervised</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 7 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=K-Nearest+Neighbors" alt="KNN">
+                    </div>
+                    <div class="card-content">
+                        <h3>K-Nearest Neighbors</h3>
+                        <p class="card-description">Simple yet effective algorithm based on neighbor proximity.</p>
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Instance-Based</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 8 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Gradient+Boosting" alt="Gradient Boosting">
+                    </div>
+                    <div class="card-content">
+                        <h3>Gradient Boosting</h3>
+                        <p class="card-description">Powerful ensemble learning technique for predictions.</p>
+                        <div class="card-tags">
+                            <span class="tag">Ensemble</span>
+                            <span class="tag">Boosting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 9 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Naive+Bayes" alt="Naive Bayes">
+                    </div>
+                    <div class="card-content">
+                        <h3>Naive Bayes</h3>
+                        <p class="card-description">Probabilistic classifier based on Bayes theorem.</p>
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Probabilistic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Model 10 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Principal+Component+Analysis" alt="PCA">
+                    </div>
+                    <div class="card-content">
+                        <h3>Principal Component Analysis</h3>
+                        <p class="card-description">Dimensionality reduction and feature extraction technique.</p>
+                        <div class="card-tags">
+                            <span class="tag">Dimensionality</span>
+                            <span class="tag">Unsupervised</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Data Science Lab. All rights reserved.</p>
+        <p>Built with ❤️ for Data Science Exploration</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script src="js/ml-script.js"></script>
+</body>
+
+</html>

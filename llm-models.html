@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Models - Data Science Lab</title>
+    <link rel="stylesheet" href="css/llm-style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-img">
+                    <img src="https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-1/528076248_2223560778075447_4856427121483293902_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e99d92&_nc_ohc=EAmCuWNC9YsQ7kNvwECITOZ&_nc_oc=AdlGhSww8u795TkvS6Cn9SPccfD-_cZ-HnJBd0HlaVUTefH7VRxjb3oMGsNUmcm5kL0&_nc_zt=24&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=polfDqEBrMY0Gtwr5lkuWA&oh=00_AfoEqrRos8Oc6Fjo1u5lGkQMfIupaNLbxmLqXwZXORDJvg&oe=696CBD99"
+                        alt="Riddy Mazumder">
+                </div>
+                <div class="logo-text">
+                    <h1>📊 Data Science Lab</h1>
+                    <p class="logo-name">by Riddy Mazumder</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kaggle-competitions.html">Kaggle Competitions</a></li>
+                <li><a href="ml-models.html">ML Models</a></li>
+                <li><a href="dl-models.html">DL Models</a></li>
+                <li><a href="llm-models.html" class="active">LLM Models</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>✨ Large Language Models</h1>
+        <p>State-of-the-art language models and NLP applications</p>
+    </header>
+
+    <section class="main-section">
+        <div class="container">
+            <div class="cards-grid">
+                <!-- LLM Model 1 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=GPT-3.5" alt="GPT-3.5">
+                    </div>
+                    <div class="card-content">
+                        <h3>GPT-3.5 Turbo</h3>
+                        <p class="card-description">Advanced language model for text generation and understanding.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">OpenAI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 2 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=GPT-4" alt="GPT-4">
+                    </div>
+                    <div class="card-content">
+                        <h3>GPT-4</h3>
+                        <p class="card-description">State-of-the-art multimodal language model.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Multimodal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 3 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=BERT" alt="BERT">
+                    </div>
+                    <div class="card-content">
+                        <h3>BERT</h3>
+                        <p class="card-description">Bidirectional Encoder Representations for pre-training.</p>
+                        <div class="card-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Pre-trained</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 4 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=T5" alt="T5">
+                    </div>
+                    <div class="card-content">
+                        <h3>T5 (Text-to-Text)</h3>
+                        <p class="card-description">Unified framework treating all NLP tasks as text-to-text.</p>
+                        <div class="card-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Seq2Seq</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 5 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=LLaMA" alt="LLaMA">
+                    </div>
+                    <div class="card-content">
+                        <h3>LLaMA</h3>
+                        <p class="card-description">Open-source large language model by Meta.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Open Source</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 6 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Claude" alt="Claude">
+                    </div>
+                    <div class="card-content">
+                        <h3>Claude</h3>
+                        <p class="card-description">Constitutional AI model for safer and more helpful interactions.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Anthropic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 7 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=PaLM+2" alt="PaLM 2">
+                    </div>
+                    <div class="card-content">
+                        <h3>PaLM 2</h3>
+                        <p class="card-description">Google's powerful language model for diverse tasks.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 8 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Mistral" alt="Mistral">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mistral</h3>
+                        <p class="card-description">High-performance open-source language model.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Open Source</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 9 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Falcon" alt="Falcon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Falcon</h3>
+                        <p class="card-description">Technology Innovation Institute's open LLM series.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Open Source</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- LLM Model 11 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/300x200?text=Falcon" alt="Falcon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Falcon</h3>
+                        <p class="card-description">Technology Innovation Institute's open LLM series.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Open Source</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Model 10 -->
+                <div class="card">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Alpaca" alt="Alpaca">
+                    </div>
+                    <div class="card-content">
+                        <h3>Alpaca</h3>
+                        <p class="card-description">Fine-tuned instruction-following model built on LLaMA.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Fine-tuned</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Data Science Lab. All rights reserved.</p>
+        <p>Built with ❤️ for Data Science Exploration</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script src="js/llm-script.js"></script>
+</body>
+
+</html>

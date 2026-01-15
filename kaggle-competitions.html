@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaggle Competitions - Data Science Lab</title>
+    <link rel="stylesheet" href="css/kaggle-style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-img">
+                    <img src=https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-1/528076248_2223560778075447_4856427121483293902_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e99d92&_nc_ohc=EAmCuWNC9YsQ7kNvwECITOZ&_nc_oc=AdlGhSww8u795TkvS6Cn9SPccfD-_cZ-HnJBd0HlaVUTefH7VRxjb3oMGsNUmcm5kL0&_nc_zt=24&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=polfDqEBrMY0Gtwr5lkuWA&oh=00_AfoEqrRos8Oc6Fjo1u5lGkQMfIupaNLbxmLqXwZXORDJvg&oe=696CBD99"
+                        alt="Riddy Mazumder">
+                </div>
+                <div class="logo-text">
+                    <h1>📊 Data Science Lab</h1>
+                    <p class="logo-name">by Riddy Mazumder</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kaggle-competitions.html" class="active">Kaggle Competitions</a></li>
+                <li><a href="ml-models.html">ML Models</a></li>
+                <li><a href="dl-models.html">DL Models</a></li>
+                <li><a href="llm-models.html">LLM Models</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>🏆 Kaggle Competitions</h1>
+        <p>My ongoing and completed Kaggle competition projects</p>
+    </header>
+
+    <section class="main-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Search competitions..." />
+            </div>
+            <div class="cards-grid">
+                <!-- Kaggle Competition 1 -->
+                <div class="card"
+                    data-link="https://riddymazumder.github.io/Diabetes-Prediction-Challenge-Playground-Series---Season-5-Episode-12/diabetes-prediction-challenge-solution">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://riddymazumder.github.io/Diabetes-Prediction-Challenge-Playground-Series---Season-5-Episode-12/header_4.jpg"
+                            alt="Diabetes Prediction Challenge">
+                    </div>
+                    <div class="card-content">
+                        <h3>Diabetes Prediction Challenge</h3>
+                        <p class="card-description">Playground Series - Season 5, Episode 12</p>
+                        <p class="card-description">Top 21%, 834 out of 4,206 teams</p>
+
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 2 -->
+                <div class="card"
+                    data-link="https://riddymazumder.github.io/Predicting-Loan-Payback-Playground-Series---Season-5-Episode-11/loan-paid-back-solution.html">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://raw.githubusercontent.com/RiddyMazumder/Predicting-Loan-Payback-Playground-Series---Season-5-Episode-11/main/header_2.png"
+                            alt="Predicting Loan Payback">
+                    </div>
+                    <div class="card-content">
+                        <h3>Predicting Loan Payback</h3>
+                        <p class="card-description">Playground Series - Season 5, Episode 11</p>
+                        <p class="card-description">Top 40%, 1490 out of 3,724 teams</p>
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 3 -->
+                <div class="card"
+                    data-link="https://riddymazumder.github.io/House-Prices---Advanced-Regression-Techniques/part1house.html">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://riddymazumder.github.io/House-Prices---Advanced-Regression-Techniques/header%20(1).png"
+                            alt="House Prices - Advanced Regression Techniques">
+                    </div>
+                    <div class="card-content">
+                        <h3>House Prices - Advanced Regression Techniques</h3>
+                        <p class="card-description">Predict sales prices and practice feature engineering, RFs, and
+                            gradient boosting</p>
+                        <p class="card-description">Top 50%, 1490 out of 5,053 Teams</p>
+                        <div class="card-tags">
+                            <span class="tag">Regression</span>
+                            <span class="tag">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 4 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Spaceship-Titanic/Spaceship-Titanic.html">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://riddymazumder.github.io/Spaceship-Titanic/Pi7_GIF_CMP.gif"
+                            alt="Spaceship Titanic">
+                    </div>
+                    <div class="card-content">
+                        <h3>Spaceship Titanic</h3>
+                        <p class="card-description">Multi-class classification on the classic Iris dataset.</p>
+                        <p class="card-description">Top 50%, 1490 out of 2,528 Teams</p>
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 5 -->
+                <div class="card"
+                    data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/titanic-solution.html">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/TITANIC-Explained-Hymn-to-the-Sea-1.webp"
+                            alt="Titanic Machine Learning from Disaster">
+                    </div>
+                    <div class="card-content">
+                        <h3>Titanic Machine Learning from Disaster</h3>
+                        <p class="card-description">Image classification using CNN architectures.</p>
+                        <p class="card-description">Top 50%, 7000 out of 13,358 Teams</p>
+                        <div class="card-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 6 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Sentiment+Analysis" alt="Sentiment Analysis">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sentiment Analysis</h3>
+                        <p class="card-description">Analyzing sentiment in text data using NLP techniques.</p>
+                        <div class="card-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 7 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Stock+Price+Forecast" alt="Stock Prediction">
+                    </div>
+                    <div class="card-content">
+                        <h3>Stock Price Forecasting</h3>
+                        <p class="card-description">Time series analysis and forecasting for stock prices.</p>
+                        <div class="card-tags">
+                            <span class="tag">Time Series</span>
+                            <span class="tag">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 8 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Clustering+Analysis" alt="Clustering">
+                    </div>
+                    <div class="card-content">
+                        <h3>Customer Clustering</h3>
+                        <p class="card-description">Unsupervised learning for customer segmentation.</p>
+                        <div class="card-tags">
+                            <span class="tag">Clustering</span>
+                            <span class="tag">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 9 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Anomaly+Detection" alt="Anomaly Detection">
+                    </div>
+                    <div class="card-content">
+                        <h3>Anomaly Detection</h3>
+                        <p class="card-description">Detecting outliers and anomalies in datasets.</p>
+                        <div class="card-tags">
+                            <span class="tag">Anomaly</span>
+                            <span class="tag">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaggle Competition 10 -->
+                <div class="card" data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                    <div class="card-image">
+                        <!-- CHANGE IMAGE URL HERE -->
+                        <img src="https://via.placeholder.com/300x200?text=Object+Detection" alt="Object Detection">
+                    </div>
+                    <div class="card-content">
+                        <h3>Object Detection in Images</h3>
+                        <p class="card-description">Real-time object detection using YOLO and R-CNN.</p>
+                        <div class="card-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Data Science Lab. All rights reserved.</p>
+        <p>Built with ❤️ for Data Science Exploration</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script src="js/kaggle-script.js"></script>
+    <script>
+        // Search functionality for Kaggle Competitions
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.card');
+
+        searchInput.addEventListener('keyup', function () {
+            const searchTerm = this.value.toLowerCase();
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('.card-description').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = '';
+                    card.style.animation = 'fadeInUp 0.3s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

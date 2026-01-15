@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Lab - Home</title>
+    <link rel="stylesheet" href="css/index-style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-img">
+                    <img src="https://scontent.fcgp3-1.fna.fbcdn.net/v/t39.30808-1/528076248_2223560778075447_4856427121483293902_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e99d92&_nc_ohc=EAmCuWNC9YsQ7kNvwECITOZ&_nc_oc=AdlGhSww8u795TkvS6Cn9SPccfD-_cZ-HnJBd0HlaVUTefH7VRxjb3oMGsNUmcm5kL0&_nc_zt=24&_nc_ht=scontent.fcgp3-1.fna&_nc_gid=polfDqEBrMY0Gtwr5lkuWA&oh=00_AfoEqrRos8Oc6Fjo1u5lGkQMfIupaNLbxmLqXwZXORDJvg&oe=696CBD99"
+                        alt="Riddy Mazumder">
+                </div>
+                <div class="logo-text">
+                    <h1>Data Science Lab</h1>
+                    <p class="logo-name">by Riddy Mazumder</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="kaggle-competitions.html">Kaggle Competitions</a></li>
+                <li><a href="ml-models.html">ML Models</a></li>
+                <li><a href="dl-models.html">DL Models</a></li>
+                <li><a href="llm-models.html">LLM Models</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Animated Image Carousel -->
+    <div class="image-carousel">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <!-- CHANGE IMAGE 1 URL -->
+                <img src="https://via.placeholder.com/1200x300?text=Data+Science" alt="Data Science">
+            </div>
+            <div class="carousel-slide">
+                <!-- CHANGE IMAGE 2 URL -->
+                <img src="https://via.placeholder.com/1200x300?text=Machine+Learning" alt="Machine Learning">
+            </div>
+            <div class="carousel-slide">
+                <!-- CHANGE IMAGE 3 URL -->
+                <img src="https://via.placeholder.com/1200x300?text=Deep+Learning" alt="Deep Learning">
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Data Science Lab</h1>
+            <p>Exploring Machine Learning, Deep Learning, and Large Language Models</p>
+            <p class="subtitle">A collection of projects, competitions, and model implementations</p>
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <div class="container">
+            <h2>About This Lab</h2>
+            <p>This is my personal Data Science laboratory where I explore and experiment with:</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🏆 Kaggle Competitions</h3>
+                    <p>Participating in competitive data science challenges to build real-world solutions and improve my
+                        skills.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤖 ML Models</h3>
+                    <p>Implementing and experimenting with classical machine learning algorithms and techniques.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🧠 Deep Learning</h3>
+                    <p>Building neural networks and deep learning architectures for complex problems.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔤 LLM Models</h3>
+                    <p>Exploring Large Language Models and natural language processing techniques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <div class="container">
+            <h2>Quick Navigation</h2>
+            <div class="links-grid">
+                <a href="kaggle-competitions.html" class="link-card">
+                    <div class="card-icon">🏅</div>
+                    <h3>Kaggle Competitions</h3>
+                    <p>View 10 active competitions</p>
+                </a>
+                <a href="ml-models.html" class="link-card">
+                    <div class="card-icon">📈</div>
+                    <h3>ML Models</h3>
+                    <p>Explore 10 machine learning models</p>
+                </a>
+                <a href="dl-models.html" class="link-card">
+                    <div class="card-icon">🧬</div>
+                    <h3>Deep Learning</h3>
+                    <p>Discover 10 deep learning architectures</p>
+                </a>
+                <a href="llm-models.html" class="link-card">
+                    <div class="card-icon">✨</div>
+                    <h3>LLM Models</h3>
+                    <p>Learn about 10 language models</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Data Science Lab. All rights reserved.</p>
+        <p>Built with ❤️ for Data Science Exploration</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script src="js/index-script.js"></script>
+    <script>
+        let slideIndex = 1;
+        let slideTimer;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.add('active');
+        }
+
+        function currentSlide(n) {
+            clearTimeout(slideTimer);
+            slideIndex = n;
+            showSlide(slideIndex);
+            autoSlide();
+        }
+
+        function autoSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+            slideTimer = setTimeout(autoSlide, 5000);
+        }
+
+        // Initialize carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            showSlide(slideIndex);
+            autoSlide();
+        });
+    </script>
+</body>
+
+</html>

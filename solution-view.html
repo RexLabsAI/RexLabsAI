@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution Viewer - Data Science Lab</title>
+    <link rel="stylesheet" href="css/kaggle-style.css">
+    <style>
+        /* Override container max-width for full width */
+        .container-fluid {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            /* Full viewport height */
+            transition: height 0.3s ease;
+        }
+
+        .main-section {
+            padding: 0;
+            /* Remove padding */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* Ensure no scrollbars during transition */
+        }
+
+        .iframe-container {
+            width: 100%;
+            flex-grow: 1;
+            border: none;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Floating back button */
+        .back-button-floating {
+            position: absolute;
+            top: 180px;
+            /* Moved down ~2.5cm related to request */
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-gray);
+        }
+
+        .back-button-floating:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Hide footer to give more space */
+        .footer {
+            display: none;
+        }
+
+        /* Smooth Navbar Animation */
+        .navbar {
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            max-height: 200px;
+            opacity: 1;
+            transform: translateY(0);
+            overflow: hidden;
+            /* For smooth height collapse */
+        }
+
+        .navbar-hidden {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-100%);
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="mainNav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-img">
+                    <img src="https://via.placeholder.com/50x50?text=RM" alt="Riddy Mazumder">
+                </div>
+                <div class="logo-text">
+                    <h1>📊 Data Science Lab</h1>
+                    <p class="logo-name">by Riddy Mazumder</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kaggle-competitions.html" class="active">Kaggle Competitions</a></li>
+                <li><a href="ml-models.html">ML Models</a></li>
+                <li><a href="dl-models.html">DL Models</a></li>
+                <li><a href="llm-models.html">LLM Models</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="main-section">
+        <div class="container-fluid">
+            <!-- Floating Back Button -->
+            <a href="kaggle-competitions.html" class="back-button-floating">
+                &larr; Back
+            </a>
+
+            <div class="iframe-container">
+                <iframe id="solutionFrame" src="" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer hidden via CSS -->
+    <footer class="footer">
+        <p>&copy; 2026 Data Science Lab. All rights reserved.</p>
+        <p>Built with ❤️ for Data Science Exploration</p>
+    </footer>
+
+    <script src="js/kaggle-script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const solutionUrl = urlParams.get('url');
+
+            if (solutionUrl) {
+                const iframe = document.getElementById('solutionFrame');
+                iframe.src = solutionUrl;
+            } else {
+                document.querySelector('.iframe-container').innerHTML =
+                    '<div style="padding: 2rem; text-align: center; color: var(--text-gray); margin-top: 100px;">No solution URL provided.</div>';
+            }
+
+            // Auto-hide navbar after 2 seconds with smooth animation
+            setTimeout(() => {
+                const navbar = document.getElementById('mainNav');
+                if (navbar) {
+                    navbar.classList.add('navbar-hidden');
+                    // Force resize trigger after animation to ensure full fit if needed
+                    setTimeout(() => {
+                        window.dispatchEvent(new Event('resize'));
+                    }, 1200); // Match transition duration
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
