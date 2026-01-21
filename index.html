@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J16WZ4NVCV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-J16WZ4NVCV');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Lab - Home</title>
+    <link rel="stylesheet" href="css/kaggle-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Global Fixed Header -->
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <button class="toggle-sidebar-btn" id="sidebarToggleBtn" title="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="#" class="header-logo-section">
+                <div class="logo-img" style="width: 40px; height: 40px;">
+                    <img src="img/REX.jpg" alt="REX">
+                </div>
+                <div class="logo-text">
+                    <h2>DS Lab</h2>
+                    <p class="logo-name">by REX</p>
+                </div>
+            </a>
+
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-bar-pill" placeholder="Search entire website..."
+                    autocomplete="off" />
+                <div id="searchResults" class="search-results-dropdown"></div>
+            </div>
+            <div class="user-actions">
+                <button class="search-toggle-btn" id="searchToggleBtn" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a href="profile/info/" class="kaggle-btn-secondary"
+                    style="text-decoration: none; display: inline-block;">My Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav" style="margin-top: 20px;">
+                <ul>
+                    <li><a href="./" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="nuralplayground/"><i class="fas fa-brain"></i> <span>Neural
+                                Playground</span></a></li>
+                    <li><a href="kaggle-competitions/"><i class="fas fa-trophy"></i> <span>Competitions</span></a></li>
+                    <li><a href="ml-models/"><i class="fas fa-microchip"></i> <span>ML Models</span></a></li>
+                    <li><a href="dl-models/"><i class="fas fa-network-wired"></i> <span>DL Models</span></a></li>
+                    <li><a href="llm-models/"><i class="fas fa-robot"></i> <span>LLM Models</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Animated Image Carousel -->
+            <div class="image-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="https://storage.googleapis.com/kaggle-media/game-arena/ai-chess-final-winners-2.png"
+                            alt="Data Science">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://www.kaggle.com/static/images/benchmarks/game-arena/what-is-game-arena-light.svg"
+                            alt="Machine Learning">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://www.kaggle.com/static/images/benchmarks/game-arena/leaderboards-light.svg"
+                            alt="Deep Learning">
+                    </div>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
+            <!-- Hero Section -->
+            <header class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to My Data Science Lab</h1>
+                    <p>Exploring Machine Learning, Deep Learning, and Large Language Models</p>
+                    <p class="subtitle">A collection of projects, competitions, and model implementations</p>
+                </div>
+            </header>
+
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2026 Data Science Lab. All rights reserved.</p>
+                <p>Built with for Data Science Exploration</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Floating Social Bar -->
+    <div class="social-floating-bar">
+        <a href="https://www.facebook.com/riddy.maximiser" target="_blank" class="social-float facebook"
+            title="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+        </a>
+        <a href="https://www.linkedin.com/in/riddy-mazumder-7bab46338/" target="_blank" class="social-float linkedin"
+            title="LinkedIn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/RiddyMazumder" target="_blank" class="social-float github" title="GitHub">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.kaggle.com/riddymazumder" target="_blank" class="social-float kaggle" title="Kaggle">
+            <img src="https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg" alt="Kaggle">
+        </a>
+        <a href="mailto:riddymazumder1971@gmail.com" class="social-float email" title="Email">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email">
+        </a>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-options" id="chatOptions">
+            <a href="https://wa.me/8801883437005" target="_blank" class="chat-option whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://t.me/+8801883437005" target="_blank" class="chat-option telegram" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://m.me/riddy.maximiser" target="_blank" class="chat-option messenger" title="Messenger">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+        </div>
+        <button class="chat-toggle" id="chatToggle" title="Contact Me">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script src="js/kaggle-script.js"></script>
+    <script>
+        let slideIndex = 1;
+        let slideTimer;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Safety check
+            if (slides[slideIndex - 1]) slides[slideIndex - 1].classList.add('active');
+            if (dots[slideIndex - 1]) dots[slideIndex - 1].classList.add('active');
+        }
+
+        function currentSlide(n) {
+            clearTimeout(slideTimer);
+            slideIndex = n;
+            showSlide(slideIndex);
+
+            // Reset auto timer
+            clearTimeout(slideTimer); // Clear existing
+            slideTimer = setTimeout(autoSlide, 5000); // Start new
+        }
+
+        function autoSlide() {
+            clearTimeout(slideTimer); // Clear valid timer to prevent doubles
+            slideIndex++;
+            showSlide(slideIndex);
+            slideTimer = setTimeout(autoSlide, 5000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showSlide(slideIndex);
+            autoSlide();
+        });
+    </script>
+</body>
+
+</html>

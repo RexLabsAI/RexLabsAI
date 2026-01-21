@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J16WZ4NVCV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-J16WZ4NVCV');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddy Mazumder - Profile</title>
+    <link rel="stylesheet" href="../../css/profile-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- GitHub Calendar -->
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Profile Image Popup Styles */
+        .profile-img {
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 20000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-modal.active {
+            opacity: 1;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: scale(0.8);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            object-fit: contain;
+        }
+
+        .image-modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            z-index: 20001;
+            background: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: var(--kaggle-blue);
+            text-decoration: none;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Ensure modal image is responsive */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+
+            .close-modal {
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Mobile Floating Back Button (Moved to root for fixed positioning) -->
+    <a href="../../" class="mobile-back-float">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <!-- REX Intro Animation Overlay -->
+    <div id="rex-intro-overlay">
+        <div id="rex-name-card">
+            <h1>REX</h1>
+        </div>
+    </div>
+
+    <div class="profile-container">
+        <!-- Sidebar: Personal Info -->
+        <aside class="profile-sidebar">
+            <header class="profile-header">
+                <div class="profile-img-wrapper">
+                    <img src="../../img/REX.jpg" alt="REX" class="profile-img" onclick="openImageModal(this.src)">
+                </div>
+                <h1 class="profile-name">REX</h1>
+                <p class="profile-title">Just an ordinary guy trying his best</p>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/riddy.maximiser" target="_blank" class="social-btn"
+                        title="Facebook">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
+                            alt="Facebook">
+                    </a>
+                    <a href="https://www.linkedin.com/in/riddy-mazumder-7bab46338/" target="_blank" class="social-btn"
+                        title="LinkedIn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                            alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/RiddyMazumder" target="_blank" class="social-btn" title="GitHub">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                            alt="GitHub">
+                    </a>
+                    <a href="https://www.kaggle.com/riddymazumder" target="_blank" class="social-btn" title="Kaggle">
+                        <img src="https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg" alt="Kaggle">
+                    </a>
+                </div>
+            </header>
+
+            <a href="../../" class="back-home desktop-back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="profile-main">
+            <!-- About Me Section -->
+            <section class="section-card">
+                <h3><i class="fas fa-user-circle"></i> About Me</h3>
+                <p>Hello! I'm REX, a CSE undergrad exploring Machine Learning, Deep Learning, and LLMs.
+                    This Data Science Lab is where I document my experiments and projects.I also participate in Kaggle
+                    competitions.
+            </section>
+
+            <!-- Relocated GitHub Contributions -->
+            <section class="github-section">
+                <h3><i class="fab fa-github"></i> GitHub Contributions</h3>
+                <div class="calendar">
+                    Loading contribution graph...
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section-card">
+                <h3><i class="fas fa-code"></i> Skills & Expertise</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">LLM</span>
+                    <span class="skill-tag">Neural Networks</span>
+                    <span class="skill-tag">Web Dev(HTML/CSS/JS)</span>
+                </div>
+            </section>
+
+            <!-- Goals Section -->
+            <section class="section-card">
+                <h3><i class="fas fa-award"></i> Professional Goals</h3>
+                <p>Oneday I will let u know</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- GitHub Calendar Script -->
+    <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
+    <script>
+        // REX Shatter Animation Logic
+        function shatterCard() {
+            const overlay = document.getElementById('rex-intro-overlay');
+            const card = document.getElementById('rex-name-card');
+            const rect = card.getBoundingClientRect();
+
+            if (overlay.classList.contains('shattered')) return;
+            overlay.classList.add('shattered');
+
+            // Create shards
+            const numShards = 80; // More shards for smoothness
+            const container = document.body;
+
+            for (let i = 0; i < numShards; i++) {
+                const shard = document.createElement('div');
+                shard.className = 'rex-shard';
+
+                // Random size and shape
+                const size = Math.random() * 25 + 5;
+                shard.style.width = size + 'px';
+                shard.style.height = size + 'px';
+
+                // Random polygon shapes for organic shattering
+                const p1 = `${Math.random() * 20}% ${Math.random() * 20}%`;
+                const p2 = `${Math.random() * 20 + 80}% ${Math.random() * 20}%`;
+                const p3 = `${Math.random() * 20 + 80}% ${Math.random() * 20 + 80}%`;
+                const p4 = `${Math.random() * 20}% ${Math.random() * 20 + 80}%`;
+                shard.style.clipPath = `polygon(${p1}, ${p2}, ${p3}, ${p4})`;
+
+                // Position at card with jitter
+                const x = rect.left + Math.random() * rect.width;
+                const y = rect.top + Math.random() * rect.height;
+                shard.style.left = x + 'px';
+                shard.style.top = y + 'px';
+
+                // Explosive trajectories
+                const angle = Math.random() * Math.PI * 2;
+                const distance = Math.random() * 600 + 400;
+                const tx = Math.cos(angle) * distance;
+                const ty = Math.sin(angle) * distance;
+                const tr = (Math.random() - 0.5) * 1080; // More rotation
+
+                shard.style.setProperty('--tx', tx + 'px');
+                shard.style.setProperty('--ty', ty + 'px');
+                shard.style.setProperty('--tr', tr + 'deg');
+
+                // Staggered animation start for smoothness
+                const duration = Math.random() * 0.6 + 0.6;
+                const delay = Math.random() * 0.1;
+                shard.style.animation = `shatter-fly ${duration}s cubic-bezier(0.2, 0.9, 0.3, 1) ${delay}s forwards`;
+
+                container.appendChild(shard);
+
+                // Clean up shards
+                setTimeout(() => shard.remove(), 2000);
+            }
+
+            // Interaction feedback
+            card.style.transform = 'scale(1.1) perspective(1000px) rotateX(20deg)';
+            card.style.opacity = '0';
+            card.style.transition = 'all 0.4s cubic-bezier(0.1, 0.8, 0.3, 1.2)';
+
+            // Smoothly reveal profile
+            overlay.style.backgroundColor = 'transparent';
+            overlay.style.backdropFilter = 'blur(0px)';
+            overlay.style.opacity = '0';
+
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 800);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Attach shatter event
+            const overlay = document.getElementById('rex-intro-overlay');
+            overlay.addEventListener('click', shatterCard);
+
+            // Automatic shatter after 1 second
+            setTimeout(shatterCard, 1000);
+
+            // Initialize GitHub Calendar
+            GitHubCalendar(".calendar", "RiddyMazumder", {
+                responsive: true,
+                tooltips: true,
+                summary_text: "Summary of pull requests, issues and commits"
+            });
+        });
+    </script>
+
+    <!-- Profile Image Modal -->
+    <div id="image-modal" class="image-modal" onclick="closeImageModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script>
+        // Profile Image Modal Logic
+        function openImageModal(src) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = "flex";
+            // Small timeout to allow display:flex to apply before adding active class for animation
+            setTimeout(() => {
+                modal.classList.add('active');
+                modalImg.src = src;
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('image-modal');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300); // Match transition duration
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+    </script>
+</body>
+
+</html>

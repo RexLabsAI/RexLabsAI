@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J16WZ4NVCV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-J16WZ4NVCV');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Models - Data Science Lab</title>
+    <link rel="stylesheet" href="../css/kaggle-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .search-bar-pill {
+            padding: 0.4rem 1rem 0.4rem 2.8rem !important;
+        }
+
+        .content-header {
+            padding: 0.5rem 2rem 0 !important;
+        }
+
+        .header-banner {
+            margin-bottom: 0.5rem !important;
+        }
+
+        .competitions-section {
+            padding-top: 0.5rem !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Global Fixed Header -->
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <button class="toggle-sidebar-btn" id="sidebarToggleBtn" title="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="../index.html" class="header-logo-section">
+                <div class="logo-img" style="width: 40px; height: 40px;">
+                    <img src="../img/REX.jpg" alt="REX">
+                </div>
+                <div class="logo-text">
+                    <h2>DS Lab</h2>
+                    <p class="logo-name">by REX</p>
+                </div>
+            </a>
+
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-bar-pill" placeholder="Search LLM models..." />
+            </div>
+            <div class="user-actions">
+                <button class="search-toggle-btn" id="searchToggleBtn" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a href="../profile/info/" class="kaggle-btn-secondary"
+                    style="text-decoration: none; display: inline-block;">My Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav" style="margin-top: 20px;">
+                <ul>
+                    <li><a href="../"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="../nuralplayground/"><i class="fas fa-brain"></i> <span>Neural
+                                Playground</span></a></li>
+                    <li><a href="../kaggle-competitions/"><i class="fas fa-trophy"></i> <span>Competitions</span></a>
+                    </li>
+                    <li><a href="../ml-models/"><i class="fas fa-microchip"></i> <span>ML Models</span></a></li>
+                    <li><a href="../dl-models/"><i class="fas fa-network-wired"></i> <span>DL Models</span></a></li>
+                    <li><a href="../llm-models/" class="active"><i class="fas fa-robot"></i> <span>LLM Models</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Page Header / Banner -->
+            <div class="content-header">
+                <div class="header-banner">
+                    <div class="banner-text">
+                        <h1>LLM Models</h1>
+                        <p>State-of-the-art language models and NLP applications.</p>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://www.kaggle.com/static/images/benchmarks/game-arena/gamearena-header-light.svg"
+                            alt="LLM Logo" style="height: 100px;">
+                    </div>
+                </div>
+
+                <!-- Kaggle-style Tabs -->
+                <div class="content-tabs">
+                    <button class="tab-item active">Language Models</button>
+                </div>
+            </div>
+
+            <!-- Main Section -->
+            <section class="competitions-section">
+                <div class="grid-container">
+                    <div class="cards-grid">
+
+                        <!-- LLM Model 1 -->
+                        <div class="competition-card" id="gpt-3-5"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=GPT-3.5" alt="GPT-3.5">
+                            </div>
+                            <div class="card-info">
+                                <h3>GPT-3.5 Turbo</h3>
+                                <p class="card-meta">Advanced generation & understanding</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-comment-dots"></i> Generative</span>
+                                    <span class="rank-badge">OpenAI</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">LLM</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 2 -->
+                        <div class="competition-card" id="gpt-4"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=GPT-4" alt="GPT-4">
+                            </div>
+                            <div class="card-info">
+                                <h3>GPT-4</h3>
+                                <p class="card-meta">State-of-the-art multimodal model</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-microchip"></i> Multimodal</span>
+                                    <span class="rank-badge">SOTA</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">GPT-4</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 3 -->
+                        <div class="competition-card" id="bert"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=BERT" alt="BERT">
+                            </div>
+                            <div class="card-info">
+                                <h3>BERT</h3>
+                                <p class="card-meta">Bidirectional encoder representations</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-language"></i> NLP</span>
+                                    <span class="rank-badge">Google</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Encoder</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 4 -->
+                        <div class="competition-card" id="t5"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=T5" alt="T5">
+                            </div>
+                            <div class="card-info">
+                                <h3>T5 (Text-to-Text)</h3>
+                                <p class="card-meta">Unified text-to-text framework</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-exchange-alt"></i> Seq2Seq</span>
+                                    <span class="rank-badge">Google</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">NLP</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 5 -->
+                        <div class="competition-card" id="llama"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=LLaMA" alt="LLaMA">
+                            </div>
+                            <div class="card-info">
+                                <h3>LLaMA</h3>
+                                <p class="card-meta">Open-source LLM by Meta</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-unlock-alt"></i> Open Source</span>
+                                    <span class="rank-badge">Meta</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">LLaMA</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 6 -->
+                        <div class="competition-card" id="claude"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=Claude" alt="Claude">
+                            </div>
+                            <div class="card-info">
+                                <h3>Claude</h3>
+                                <p class="card-meta">Constitutional AI by Anthropic</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-shield-alt"></i> Safe AI</span>
+                                    <span class="rank-badge">Anthropic</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Helpful</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 7 -->
+                        <div class="competition-card" id="palm-2"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=PaLM+2" alt="PaLM 2">
+                            </div>
+                            <div class="card-info">
+                                <h3>PaLM 2</h3>
+                                <p class="card-meta">Google's path-to-language model</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-project-diagram"></i> Scalable</span>
+                                    <span class="rank-badge">Google</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">PaLM</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 8 -->
+                        <div class="competition-card" id="mistral"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=Mistral" alt="Mistral">
+                            </div>
+                            <div class="card-info">
+                                <h3>Mistral</h3>
+                                <p class="card-meta">High-perf open source model</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-wind"></i> Efficient</span>
+                                    <span class="rank-badge">Open Source</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Mistral</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 9 -->
+                        <div class="competition-card" id="falcon"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=Falcon" alt="Falcon">
+                            </div>
+                            <div class="card-info">
+                                <h3>Falcon</h3>
+                                <p class="card-meta">TII open LLM series</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-feather"></i> Lightweight</span>
+                                    <span class="rank-badge">TII</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Falcon</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LLM Model 10 -->
+                        <div class="competition-card"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/">
+                            <div class="card-img-wrapper">
+                                <img src="https://via.placeholder.com/300x200?text=Alpaca" alt="Alpaca">
+                            </div>
+                            <div class="card-info">
+                                <h3>Alpaca</h3>
+                                <p class="card-meta">Instruction-following LLaMA</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-terminal"></i> Instructions</span>
+                                    <span class="rank-badge">Stanford</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Fine-tuned</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Implementation</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Pagination Controls -->
+                    <div id="paginationControls" class="pagination-container"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Floating Social Bar -->
+    <div class="social-floating-bar">
+        <a href="https://www.facebook.com/riddy.maximiser" target="_blank" class="social-float facebook"
+            title="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+        </a>
+        <a href="https://www.linkedin.com/in/riddy-mazumder-7bab46338/" target="_blank" class="social-float linkedin"
+            title="LinkedIn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/RiddyMazumder" target="_blank" class="social-float github" title="GitHub">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.kaggle.com/riddymazumder" target="_blank" class="social-float kaggle" title="Kaggle">
+            <img src="https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg" alt="Kaggle">
+        </a>
+        <a href="mailto:riddymazumder1971@gmail.com" class="social-float email" title="Email">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email">
+        </a>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-options" id="chatOptions">
+            <a href="https://wa.me/8801883437005" target="_blank" class="chat-option whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://t.me/+8801883437005" target="_blank" class="chat-option telegram" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://m.me/riddy.maximiser" target="_blank" class="chat-option messenger" title="Messenger">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+        </div>
+        <button class="chat-toggle" id="chatToggle" title="Contact Me">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <!-- START: MAINTENANCE POPUP (Remove this entire block when maintenance is over) -->
+    <div id="maintenancePopup" class="maintenance-popup">
+        <div class="maintenance-content">
+            <div class="maintenance-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="maintenance-text">
+                <h3>Under Maintenance</h3>
+                <p>We're currently fine-tuning these language models. Stay tuned for updates!</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .maintenance-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.2);
+            backdrop-filter: none;
+            z-index: 9500;
+            /* Higher than main content but lower than nav/sidebar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: all;
+        }
+
+        /* Allow interaction with these components by lifting them above the overlay */
+        .sidebar,
+        .social-floating-bar,
+        .chat-widget,
+        .messenger-chat-box,
+        .multi-chat-box,
+        .top-nav {
+            z-index: 10001 !important;
+        }
+
+        .maintenance-content {
+            background: rgba(15, 23, 42, 0.98);
+            color: white;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: popupIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .maintenance-icon {
+            font-size: 48px;
+            color: #10b981;
+            margin-bottom: 5px;
+        }
+
+        .maintenance-text h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+
+        .maintenance-text p {
+            margin: 10px 0 0;
+            font-size: 1rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        @keyframes popupIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+    </style>
+    <!-- END: MAINTENANCE POPUP -->
+
+    <script src="../js/kaggle-script.js"></script>
+</body>
+
+</html>

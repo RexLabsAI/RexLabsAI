@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J16WZ4NVCV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-J16WZ4NVCV');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaggle Competitions - Data Science Lab</title>
+    <link rel="stylesheet" href="../css/kaggle-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Global Fixed Header -->
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <button class="toggle-sidebar-btn" id="sidebarToggleBtn" title="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="../index.html" class="header-logo-section">
+                <div class="logo-img" style="width: 40px; height: 40px;">
+                    <img src="../img/REX.jpg" alt="REX">
+                </div>
+                <div class="logo-text">
+                    <h2>DS Lab</h2>
+                    <p class="logo-name">by REX</p>
+                </div>
+            </a>
+
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-bar-pill" placeholder="Search competitions..." />
+            </div>
+            <div class="user-actions">
+                <button class="search-toggle-btn" id="searchToggleBtn" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a href="../profile/info/" class="kaggle-btn-secondary"
+                    style="text-decoration: none; display: inline-block;">My Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav" style="margin-top: 20px;">
+                <ul>
+                    <li><a href="../"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="../nuralplayground/"><i class="fas fa-brain"></i> <span>Neural
+                                Playground</span></a></li>
+                    <li><a href="../kaggle-competitions/" class="active"><i class="fas fa-trophy"></i>
+                            <span>Competitions</span></a></li>
+                    <li><a href="../ml-models/"><i class="fas fa-microchip"></i> <span>ML Models</span></a></li>
+                    <li><a href="../dl-models/"><i class="fas fa-network-wired"></i> <span>DL Models</span></a></li>
+                    <li><a href="../llm-models/"><i class="fas fa-robot"></i> <span>LLM Models</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Page Header / Banner -->
+            <div class="content-header">
+                <div class="header-banner">
+                    <div class="banner-text">
+                        <h1>Kaggle Competitions</h1>
+                        <p>Here all my kaggle competitions notebooks are stored.</p>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://www.kaggle.com/static/images/competitions/landing-header-light.svg"
+                            alt="Kaggle Logo" style="height: 100px;">
+                    </div>
+                </div>
+
+                <!-- Kaggle-style Tabs -->
+                <div class="content-tabs">
+                    <button class="tab-item active">Overview</button>
+                </div>
+            </div>
+
+            <!-- Main Section -->
+            <section class="competitions-section">
+                <div class="grid-container">
+                    <div class="cards-grid">
+
+                        <!-- Kaggle Competition 1 -->
+                        <div class="competition-card" id="diabetes"
+                            data-link="https://riddymazumder.github.io/Diabetes-Prediction-Challenge-Playground-Series---Season-5-Episode-12/diabetes-prediction-challenge-solution">
+                            <div class="card-img-wrapper">
+                                <img src="https://riddymazumder.github.io/Diabetes-Prediction-Challenge-Playground-Series---Season-5-Episode-12/header_4.jpg"
+                                    alt="Diabetes Prediction Challenge">
+                            </div>
+                            <div class="card-info">
+                                <h3>Diabetes Prediction Challenge</h3>
+                                <p class="card-meta">Playground Series - S5E12</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-users"></i> 4,206 teams</span>
+                                    <span class="rank-badge">Top 21%</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Classification</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Solution</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kaggle Competition 2 -->
+                        <div class="competition-card" id="student-scores" data-link="#">
+                            <div class="card-img-wrapper">
+                                <img src="https://www.kaggle.com/competitions/119082/images/header"
+                                    alt="Sentiment Analysis">
+                            </div>
+                            <div class="card-info">
+                                <h3>Predicting Student Test Scores</h3>
+                                <p class="card-meta">Playground Series - Season 6 Episode 1</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-clock"></i> In Progress</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Classification</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn secondary">Coming Soon</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kaggle Competition 3 -->
+                        <div class="competition-card" id="loan-payback"
+                            data-link="https://riddymazumder.github.io/Predicting-Loan-Payback-Playground-Series---Season-5-Episode-11/loan-paid-back-solution.html">
+                            <div class="card-img-wrapper">
+                                <img src="https://raw.githubusercontent.com/RiddyMazumder/Predicting-Loan-Payback-Playground-Series---Season-5-Episode-11/main/header_2.png"
+                                    alt="Predicting Loan Payback">
+                            </div>
+                            <div class="card-info">
+                                <h3>Predicting Loan Payback</h3>
+                                <p class="card-meta">Playground Series - S5E11</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-users"></i> 3,724 teams</span>
+                                    <span class="rank-badge">Top 40%</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Classification</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Solution</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kaggle Competition 4 -->
+                        <div class="competition-card" id="house-prices"
+                            data-link="https://riddymazumder.github.io/House-Prices---Advanced-Regression-Techniques/part1house.html">
+                            <div class="card-img-wrapper">
+                                <img src="https://riddymazumder.github.io/House-Prices---Advanced-Regression-Techniques/header%20(1).png"
+                                    alt="House Prices">
+                            </div>
+                            <div class="card-info">
+                                <h3>House Prices - Advanced Regression</h3>
+                                <p class="card-meta">Predict sales prices, RFs, and Boosting</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-users"></i> 5,053 teams</span>
+                                    <span class="rank-badge">Top 50%</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Regression</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Solution</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kaggle Competition 5 -->
+                        <div class="competition-card" id="spaceship-titanic"
+                            data-link="https://riddymazumder.github.io/Spaceship-Titanic/Spaceship-Titanic.html">
+                            <div class="card-img-wrapper">
+                                <img src="https://riddymazumder.github.io/Spaceship-Titanic/Pi7_GIF_CMP.gif"
+                                    alt="Spaceship Titanic">
+                            </div>
+                            <div class="card-info">
+                                <h3>Spaceship Titanic</h3>
+                                <p class="card-meta">Classic machine learning classification</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-users"></i> 2,528 teams</span>
+                                    <span class="rank-badge">Top 50%</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Classification</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Solution</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kaggle Competition 6 -->
+                        <div class="competition-card" id="titanic"
+                            data-link="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/titanic-solution.html">
+                            <div class="card-img-wrapper">
+                                <img src="https://riddymazumder.github.io/Titanic-Machine-Learning-from-Disaster/TITANIC-Explained-Hymn-to-the-Sea-1.webp"
+                                    alt="Titanic Disaster">
+                            </div>
+                            <div class="card-info">
+                                <h3>Titanic - ML from Disaster</h3>
+                                <p class="card-meta">Legendary ML competition</p>
+                                <div class="card-stats">
+                                    <span><i class="fas fa-users"></i> 13,358 teams</span>
+                                    <span class="rank-badge">Top 50%</span>
+                                </div>
+                                <div class="card-tags-pill">
+                                    <span class="tag-pill">Classification</span>
+                                </div>
+                                <div class="card-footer-action">
+                                    <button class="view-solution-btn">View Solution</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Pagination Controls -->
+                    <div id="paginationControls" class="pagination-container"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Data Science Lab. All rights reserved.</p>
+        <p>Built with ❤️ for Data Science Exploration</p>
+        <p class="contact-text">Contact with me</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/riddy.maximiser" target="_blank" title="Facebook"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/riddy-mazumder-7bab46338/" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/RiddyMazumder" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.kaggle.com/riddymazumder" target="_blank" title="Kaggle"><i
+                    class="fab fa-kaggle"></i></a>
+            <a href="mailto:riddymazumder1971@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <!-- Floating Social Bar -->
+    <div class="social-floating-bar">
+        <a href="https://www.facebook.com/riddy.maximiser" target="_blank" class="social-float facebook"
+            title="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+        </a>
+        <a href="https://www.linkedin.com/in/riddy-mazumder-7bab46338/" target="_blank" class="social-float linkedin"
+            title="LinkedIn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/RiddyMazumder" target="_blank" class="social-float github" title="GitHub">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.kaggle.com/riddymazumder" target="_blank" class="social-float kaggle" title="Kaggle">
+            <img src="https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg" alt="Kaggle">
+        </a>
+        <a href="mailto:riddymazumder1971@gmail.com" class="social-float email" title="Email">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email">
+        </a>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-options" id="chatOptions">
+            <a href="https://wa.me/8801883437005" target="_blank" class="chat-option whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://t.me/+8801883437005" target="_blank" class="chat-option telegram" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://m.me/riddy.maximiser" target="_blank" class="chat-option messenger" title="Messenger">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+        </div>
+        <button class="chat-toggle" id="chatToggle" title="Contact Me">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script src="../js/kaggle-script.js"></script>
+</body>
+
+</html>

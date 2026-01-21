@@ -1,0 +1,486 @@
+/* General Styles - Kaggle Inspired */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --kaggle-blue: #20BEFF;
+    --kaggle-blue-dark: #008ABC;
+    --kaggle-black: #202124;
+    --kaggle-text-main: #3C4043;
+    --kaggle-text-secondary: #5F6368;
+    --kaggle-bg-white: #FFFFFF;
+    --kaggle-bg-light: #F8F9FA;
+    --kaggle-border: #DADCE0;
+    --primary-color: #20BEFF;
+    --primary-light: #0078d4;
+    --text-dark: #202124;
+    --text-gray: #5F6368;
+    --text-light: #999999;
+    --bg-white: #ffffff;
+    --bg-light: #F8F9FA;
+    --border-gray: #DADCE0;
+    --shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--kaggle-text-main);
+    background-color: var(--kaggle-bg-light);
+    line-height: 1.6;
+}
+
+/* Navigation Bar - Kaggle Style */
+.navbar {
+    background: var(--kaggle-bg-white);
+    border-bottom: 1px solid var(--kaggle-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--kaggle-bg-light);
+    border: 2px solid var(--kaggle-border);
+}
+
+.logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--kaggle-black);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.logo-name {
+    font-size: 0.75rem;
+    color: var(--kaggle-text-secondary);
+    margin: 0;
+    font-weight: 400;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-menu a {
+    color: var(--kaggle-text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--kaggle-blue);
+}
+
+.nav-menu a.active {
+    color: var(--kaggle-black);
+    border-bottom-color: var(--kaggle-blue);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.mobile-menu-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--kaggle-black);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Back to Top Button - Kaggle Style */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--kaggle-blue);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(32, 190, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--kaggle-blue-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(32, 190, 255, 0.4);
+}
+
+/* Carousel - Enhanced Kaggle Style */
+.image-carousel {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.carousel-track {
+    position: relative;
+    height: 320px;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+}
+
+.dot.active {
+    background: white;
+    width: 32px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section - Kaggle Premium */
+.hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 3.5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--kaggle-border);
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--kaggle-black);
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: var(--kaggle-text-secondary);
+    margin-bottom: 0.6rem;
+    font-weight: 400;
+}
+
+.hero .subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Intro Section - Kaggle Style */
+.intro-section {
+    padding: 3.5rem 2rem;
+    background: var(--kaggle-bg-white);
+}
+
+.intro-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--kaggle-black);
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+.intro-section p {
+    color: var(--kaggle-text-secondary);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+/* Features Grid - Kaggle Card Style */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: var(--kaggle-bg-white);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--kaggle-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1);
+}
+
+.feature-card:hover {
+    border-color: var(--kaggle-blue);
+    box-shadow: 0 4px 12px rgba(32, 190, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--kaggle-black);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--kaggle-text-secondary);
+    line-height: 1.6;
+}
+
+/* Quick Links - Premium Kaggle Cards */
+.quick-links {
+    padding: 3.5rem 2rem;
+    background: var(--kaggle-bg-light);
+    border-top: 1px solid var(--kaggle-border);
+}
+
+.quick-links h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--kaggle-black);
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--kaggle-bg-white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--kaggle-border);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1);
+    cursor: pointer;
+}
+
+.link-card:hover {
+    border-color: var(--kaggle-blue);
+    box-shadow: 0 4px 16px rgba(32, 190, 255, 0.2);
+    transform: translateY(-6px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.link-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--kaggle-black);
+    margin-bottom: 0.6rem;
+}
+
+.link-card p {
+    font-size: 0.95rem;
+    color: var(--kaggle-text-secondary);
+}
+
+/* Footer - Kaggle Style */
+.footer {
+    background: var(--kaggle-bg-white);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--kaggle-border);
+    color: var(--kaggle-text-secondary);
+    font-size: 0.95rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0.8rem 1rem;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--kaggle-bg-white);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        gap: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 99;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+
+    .nav-menu a {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-track {
+        height: 220px;
+    }
+
+    .features-grid,
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-section,
+    .quick-links {
+        padding: 2.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .logo-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-track {
+        height: 160px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .feature-card,
+    .link-card {
+        padding: 1.5rem;
+    }
+}

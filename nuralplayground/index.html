@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J16WZ4NVCV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-J16WZ4NVCV');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Lab - Neural Playground</title>
+    <link rel="stylesheet" href="../css/kaggle-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Specific styles for the playground container */
+        .playground-container {
+            width: 100%;
+            height: calc(100vh - 60px);
+            /* Adjust based on header height, approx 60px */
+            border: none;
+            overflow: hidden;
+        }
+
+        .main-content {
+            padding: 0 !important;
+            /* Remove padding to let iframe fill space if needed */
+            overflow: hidden;
+            /* Prevent double scrollbars */
+        }
+
+
+
+        /* Auto-hide top-nav styling */
+        .top-nav {
+            transition: transform 0.1s ease-in-out;
+            transform: translateY(0);
+        }
+
+        .top-nav.hidden {
+            transform: translateY(-100%);
+        }
+
+        /* Adjust app-container to expand when nav is hidden */
+        .app-container {
+            transition: margin-top 0.5s ease-in-out, height 0.5s ease-in-out;
+        }
+
+        .app-container.expanded {
+            margin-top: 0 !important;
+            height: 100vh !important;
+        }
+
+        /* Ensure playground container adjusts height */
+        .playground-container.expanded {
+            height: 100vh !important;
+        }
+
+        /* Persistent Header (Copy of Logo + Toggle) */
+        .persistent-header {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 950;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .persistent-header.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .persistent-header .toggle-sidebar-btn {
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Fix: Remove dark overlay for iframe page */
+        .sidebar-overlay {
+            background: transparent !important;
+            pointer-events: none !important;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Auto-hide logic
+            setTimeout(function () {
+                var topNav = document.querySelector('.top-nav');
+                var appContainer = document.querySelector('.app-container');
+                var playgroundContainer = document.querySelector('.playground-container');
+                var persistentHeader = document.querySelector('.persistent-header');
+
+                if (topNav) topNav.classList.add('hidden');
+                if (appContainer) appContainer.classList.add('expanded');
+                if (playgroundContainer) playgroundContainer.classList.add('expanded');
+                if (persistentHeader) persistentHeader.classList.add('visible');
+            }, 2000); // 2 seconds delay
+
+            // Persistent Sidebar Toggle Logic
+            var persistentToggle = document.getElementById('persistentSidebarToggle');
+            if (persistentToggle) {
+                persistentToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    var sidebar = document.querySelector('.sidebar');
+                    var overlay = document.getElementById('sidebarOverlay');
+                    var appContainer = document.querySelector('.app-container'); // Global rail toggle
+
+                    // Trigger both mobile and desktop behavior
+                    if (sidebar) sidebar.classList.toggle('active');
+                    if (overlay) overlay.classList.toggle('active');
+                    if (appContainer) appContainer.classList.toggle('collapsed');
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Global Fixed Header -->
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <button class="toggle-sidebar-btn" id="sidebarToggleBtn" title="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="../" class="header-logo-section">
+                <div class="logo-img" style="width: 40px; height: 40px;">
+                    <img src="../img/REX.jpg" alt="REX">
+                </div>
+                <div class="logo-text">
+                    <h2>DS Lab</h2>
+                    <p class="logo-name">by REX</p>
+                </div>
+            </a>
+
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-bar-pill" placeholder="Search..." />
+            </div>
+            <div class="user-actions">
+                <a href="../profile/info/" class="kaggle-btn-secondary"
+                    style="text-decoration: none; display: inline-block;">My Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Persistent Header Controls (Hidden initially) -->
+    <div class="persistent-header">
+        <button class="toggle-sidebar-btn" id="persistentSidebarToggle" title="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="../" class="header-logo-section" style="margin-left: 0;">
+            <div class="logo-img" style="width: 40px; height: 40px;">
+                <img src="../img/REX.jpg" alt="REX">
+            </div>
+            <div class="logo-text">
+                <h2>DS Lab</h2>
+                <p class="logo-name">by REX</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="app-container">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav" style="margin-top: 20px;">
+                <ul>
+                    <li><a href="../"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="./index.html" class="active"><i class="fas fa-brain"></i> <span>Neural
+                                Playground</span></a></li>
+                    <li><a href="../kaggle-competitions/"><i class="fas fa-trophy"></i> <span>Competitions</span></a>
+                    </li>
+                    <li><a href="../ml-models/"><i class="fas fa-microchip"></i> <span>ML Models</span></a></li>
+                    <li><a href="../dl-models/"><i class="fas fa-network-wired"></i> <span>DL Models</span></a></li>
+                    <li><a href="../llm-models/"><i class="fas fa-robot"></i> <span>LLM Models</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <iframe src="../nuralplaygroundmainpage/index.html" class="playground-container" id="playground"
+                title="Neural Network Playground"></iframe>
+        </main>
+    </div>
+
+
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-options" id="chatOptions">
+            <a href="https://wa.me/8801883437005" target="_blank" class="chat-option whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://t.me/+8801883437005" target="_blank" class="chat-option telegram" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+
+        </div>
+        <button class="chat-toggle" id="chatToggle" title="Contact Me">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script src="../js/kaggle-script.js"></script>
+</body>
+
+</html>
